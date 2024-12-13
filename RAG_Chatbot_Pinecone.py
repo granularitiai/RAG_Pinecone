@@ -72,7 +72,7 @@ def load_document(file):
 # In[71]:
 
 
-document = "document_path"
+document = "Statistics-WEB.pdf"
 content = load_document(document)
 len(content)
 
@@ -97,8 +97,8 @@ print(len(fragments))
 # In[74]:
 
 
-os.environ['OPENAI_API_KEY'] = "OPENAI_API_KEY"
-os.environ['PINECONE_API_KEY'] = "PINECONE_API_KEY"
+os.environ['OPENAI_API_KEY'] = "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"
+os.environ['PINECONE_API_KEY'] = "e45fa3ed-a288-4905-a9ce-adadcd7199d3"
 
 
 # In[75]:
@@ -120,7 +120,7 @@ len(vectors)
 
 from pinecone import Pinecone
 
-pc = Pinecone(api_key= 'PINECONE_API_KEY')
+pc = Pinecone(api_key= 'e45fa3ed-a288-4905-a9ce-adadcd7199d3')
 index_name = "serverless-index"
 
 
@@ -165,7 +165,7 @@ def retrieve_answer(query):
 # In[83]:
 
 
-our_query = "EnterYourOwnQuery"
+our_query = "What is statistics?"
 answer = retrieve_answer(our_query)
 print(answer)
 
